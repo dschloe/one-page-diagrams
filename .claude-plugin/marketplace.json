@@ -1,7 +1,12 @@
 {
   "name": "one-page-diagrams",
-  "owner": { "name": "dschloe", "url": "https://github.com/dschloe" },
-  "description": "보고서·강의자료용 그림 한 장 스킬",
+  "owner": {
+    "name": "dschloe",
+    "url": "https://github.com/dschloe"
+  },
+  "metadata": {
+    "description": "보고서·강의자료용 그림 한 장 스킬"
+  },
   "plugins": [
     {
       "name": "one-page-diagrams",
