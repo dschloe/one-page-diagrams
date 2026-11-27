@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1272 304" width="1272" height="304">
+  <style>text { font-family: 'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif; }</style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1272" height="304" fill="#ffffff"/>
+  <path d="M 300 192 L 348 192" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 608 192 L 656 192" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 916 192 L 972 192" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="140" width="260" height="104" rx="32" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="348" y="140" width="260" height="104" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <rect x="656" y="140" width="260" height="104" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <rect x="972" y="140" width="260" height="104" rx="32" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="170" y="176" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">1. Write the plan</text>
+  <text x="170" y="202" font-size="13" font-weight="400" fill="#475569" text-anchor="middle">Goals, non-goals, build order</text>
+  <text x="170" y="224" font-size="13" fill="#475569" text-anchor="middle" style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace">docs/plan.md</text>
+  <text x="478" y="176" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">2. Build one slice</text>
+  <text x="478" y="202" font-size="13" font-weight="400" fill="#475569" text-anchor="middle">Follow the build order</text>
+  <text x="478" y="224" font-size="13" fill="#475569" text-anchor="middle" style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace">web/app.js</text>
+  <text x="786" y="176" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">3. Run the checklist</text>
+  <text x="786" y="202" font-size="13" font-weight="400" fill="#475569" text-anchor="middle">Fix failures before moving on</text>
+  <text x="786" y="224" font-size="13" fill="#475569" text-anchor="middle" style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace">npm test</text>
+  <text x="1102" y="176" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">4. Deploy</text>
+  <text x="1102" y="202" font-size="13" font-weight="400" fill="#475569" text-anchor="middle">Push, then publish</text>
+  <text x="1102" y="224" font-size="13" fill="#475569" text-anchor="middle" style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace">git push</text>
+  <text x="40" y="56" font-size="26" font-weight="700" fill="#0f172a">Plan first, build in slices, deploy after the checklist passes</text>
+  <text x="40" y="84" font-size="15" font-weight="400" fill="#475569">English-only diagram: Latin font stack, monospace for file names and commands</text>
+</svg>

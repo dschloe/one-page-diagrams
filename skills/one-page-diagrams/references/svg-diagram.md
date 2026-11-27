@@ -10,8 +10,10 @@
 2. 외부 자원 금지: `@import`, 웹 글꼴, 외부 이미지, 스크립트를 넣지 않는다.
 3. 색은 아래 팔레트의 16진수 값을 속성에 직접 쓴다. `var(--...)`를 쓰지 않는다.
 4. 맨 위에 `<style>` 한 번: `text { font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',sans-serif; }`
+   - 영어로만 된 그림은 `text { font-family: 'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif; }`로 바꾼다.
+   - 파일 이름·명령어·코드는 그 `<text>`에만 `style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace"`를 붙인다. `font-family` 속성으로 쓰면 위 `<style>`에 덮여 적용되지 않는다.
 5. 그리는 순서(뒤에서 앞으로): 배경 → 영역 테두리 → 화살표 → 상자 → 글자 → 범례 → 제목.
-6. 상자 안 글자는 `text-anchor="middle"`. 상자 폭은 (가장 긴 줄 글자 수 × 글꼴 크기 × 1.0) + 32 이상.
+6. 상자 안 글자는 `text-anchor="middle"`. 상자 폭은 (가장 긴 줄의 글자 폭) + 32 이상. 글자 폭은 한글 한 글자를 글꼴 크기 × 1.0, 영문·숫자 한 글자를 글꼴 크기 × 0.55로 더한다. 고정폭 글꼴은 글자당 0.6.
 7. XML 주석을 넣지 않는다. `&`는 `&amp;`, `<`는 `&lt;`로 쓴다.
 
 ## 크기
@@ -41,6 +43,8 @@
 | 데이터·저장 | `#ede9fe` | `#7c3aed` |
 | 외부 | `#ffffff` | `#94a3b8` (점선 `stroke-dasharray="6,4"`) |
 | 화살표 | | `#475569` |
+
+사용자가 색을 지정하면: 일반 단계의 테두리를 그 색으로, 채움은 같은 색을 밝게 한 값으로 바꾼다. 시작·끝 상자는 그 색으로 채우고 글자를 `#ffffff`로 쓴다. 판단과 오류 색은 그대로 둔다.
 
 어두운 배경을 요청받으면: 배경 `#0f172a`, 글자 `#f8fafc`, 설명 `#94a3b8`, 채움은 위 테두리 색에 `fill-opacity="0.18"`.
 

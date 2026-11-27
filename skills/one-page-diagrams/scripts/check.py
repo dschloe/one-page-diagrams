@@ -49,6 +49,62 @@ class Report:
         self.warnings.append(m)
 
 
+def text_units(s):
+    """글자 폭을 글꼴 크기 단위로 어림한다. 한글·한자·전각 기호 1.0, 영문·숫자 0.55."""
+    total = 0.0
+    for ch in s:
+        if ch == " ":
+            total += 0.3
+        elif ch in ".,:;'!|()[]{}/-":
+            total += 0.35
+        elif ord(ch) < 0x2000:
+            total += 0.4 if ch in "·" else 0.55 if ord(ch) < 0x80 else 0.6
+        else:
+            total += 1.0
+    return total
+
+
+def _num(v):
+    try:
+        return float(re.sub(r"[^0-9.+-]", "", str(v)))
+    except ValueError:
+        return None
+
+
+def check_svg_overflow(root, r):
+    """글자가 자기 상자(또는 그림 가장자리) 밖으로 나가는지 폭을 어림해 확인한다."""
+    vb = [_num(v) for v in root.attrib.get("viewBox", "").replace(",", " ").split()]
+    vb_w = vb[2] if len(vb) == 4 and vb[2] else None
+    rects = []
+    for el in root.iter():
+        if el.tag.endswith("rect") and el.attrib.get("fill", "") != "none":
+            x, y = _num(el.attrib.get("x", 0)) or 0.0, _num(el.attrib.get("y", 0)) or 0.0
+            w, h = _num(el.attrib.get("width")), _num(el.attrib.get("height"))
+            if not w or not h or (vb_w and w >= vb_w):
+                continue
+            rects.append((x, y, w, h))
+    for t in root.iter():
+        if not (t.tag.endswith("text") and t.text and t.text.strip()):
+            continue
+        s = t.text.strip()
+        size = _num(t.attrib.get("font-size", 16)) or 16.0
+        x, y = _num(t.attrib.get("x")), _num(t.attrib.get("y"))
+        if x is None or y is None:
+            continue
+        width = text_units(s) * size
+        anchor = t.attrib.get("text-anchor", "start")
+        left = x - width / 2 if anchor == "middle" else x - width if anchor == "end" else x
+        right = left + width
+        inside = [b for b in rects if b[0] <= x <= b[0] + b[2] and b[1] <= y <= b[1] + b[3]]
+        short = s if len(s) <= 20 else s[:20] + "..."
+        if inside:
+            bx, _, bw, _ = min(inside, key=lambda b: b[2] * b[3])
+            if left < bx + 8 or right > bx + bw - 8:
+                r.warn(f"글자가 상자 밖으로 나갈 수 있습니다(글자 약 {width:.0f}px, 상자 {bw:.0f}px): '{short}'")
+        elif vb_w and (left < 0 or right > vb_w):
+            r.warn(f"글자가 그림 밖으로 나갈 수 있습니다(글자 약 {width:.0f}px): '{short}'")
+
+
 def check_svg_text(text, r, where="SVG"):
     try:
         root = ET.fromstring(text)
@@ -63,11 +119,7 @@ def check_svg_text(text, r, where="SVG"):
         r.warn(f"{where}에 CSS 변수(var(--...))가 있습니다. PowerPoint·Word에서 색이 빠질 수 있습니다.")
     if re.search(r"<script|@import|https?://(?!www\.w3\.org)", text):
         r.warn(f"{where}에 외부 자원이나 스크립트가 있습니다.")
-    for t in root.iter():
-        if t.tag.endswith("text") and t.text:
-            s = t.text.strip()
-            if len(s) > 28:
-                r.warn(f"글자가 깁니다(넘침 확인): '{s[:20]}...'")
+    check_svg_overflow(root, r)
 
 
 def check_svg(path, r):
@@ -204,7 +256,7 @@ def check_spec(path, r):
     ids = {n.get("id") for n in nodes}
     for n in nodes:
         for line in str(n.get("label", "")).split("\n"):
-            if len(line) > 12:
+            if text_units(line) > 12:
                 r.warn(f"노드 {n.get('id')} 라벨 한 줄이 깁니다. \\n으로 나누세요: '{line}'")
     for e in spec.get("edges", []):
         for k in ("from", "to"):
