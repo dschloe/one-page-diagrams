@@ -36,6 +36,10 @@ license: MIT (bundles adapted material under MIT and Apache-2.0; see NOTICE.md)
 
 - 파일 이름: 내용을 나타내는 영문 소문자와 하이픈. 예: `approval-flow.drawio`, `course-roadmap-infographic.html`.
 - 기본 테마는 밝은 배경이다(보고서·슬라이드용). 사용자가 어두운 배경을 원하면 바꾼다.
+- 방향(가로·세로): 순서도, 업무 흐름도, 타임라인, 단계 그림처럼 흐름이 한 방향으로 이어지는 그림에 적용한다.
+  - 사용자가 방향이나 용도를 말했으면 그대로 따른다. 슬라이드·발표·16:9는 가로(왼쪽→오른쪽), 보고서·문서·A4는 세로(위→아래).
+  - 말하지 않았으면 고른 방식의 기본 방향으로 초안을 먼저 만든다. 만들기 전에는 묻지 않는다. 초안을 보여 준 뒤 6단계에서 한 번 묻는다.
+  - 가로로 만들 때: SVG는 상자를 왼쪽에서 오른쪽으로 놓고 분기는 위아래로 벌린다. draw.io와 엑스칼리드로는 명세에 `"direction": "LR"`을 쓴다.
 - 한글 글꼴 순서: `'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif`. 웹 글꼴을 불러오지 않는다(오프라인에서도 보이게).
 - 실행 환경별 처리:
   - 파일을 쓸 수 있으면(Claude Code, Codex, claude.ai·ChatGPT의 코드 실행) 파일로 저장하고 사용자에게 전달한다.
@@ -63,7 +67,7 @@ license: MIT (bundles adapted material under MIT and Apache-2.0; see NOTICE.md)
 
 ## 6단계: 전달 문구
 
-결과와 함께 아래 세 가지만 짧게 알린다.
+결과와 함께 아래 내용만 짧게 알린다.
 
 1. 어떤 방식을 골랐는지와 이유 한 줄. 만든 파일 목록(원본, PNG).
 2. 여는 방법:
@@ -71,5 +75,6 @@ license: MIT (bundles adapted material under MIT and Apache-2.0; see NOTICE.md)
    - `.drawio`: https://app.diagrams.net 에서 파일 열기(설치 불필요). 링크를 만들었으면 링크도 준다.
    - `.excalidraw`: https://excalidraw.com 에서 메뉴 → 열기(설치 불필요).
 3. 고칠 수 있는 것 한 줄. 예: "색, 순서, 문구를 말씀하시면 바꿉니다."
+4. 방향 질문 한 줄(3단계의 방향 규칙에 해당하고, 사용자가 방향·용도를 말하지 않았을 때만). 지금 방향을 밝히고 반대 방향을 제안한다. 예: "지금은 세로형입니다. 슬라이드에 넣으실 거면 가로형으로 다시 만들까요?" 사용자가 답하면 같은 내용으로 방향만 바꿔 다시 만들고, 이 질문은 다시 하지 않는다.
 
 과정 설명, 사과, 장식 문구는 넣지 않는다.
