@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 700" width="880" height="700">
+<style>text { font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',sans-serif; }</style>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+    <polygon points="0 0, 10 4, 0 8" fill="#475569"/>
+  </marker>
+</defs>
+<rect width="880" height="700" fill="#ffffff"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#0f172a">마감 전에 낸 과제만 자동 채점된다</text>
+<text x="40" y="80" font-size="15" fill="#475569">과제 제출 처리 흐름</text>
+
+<path d="M 400 184 L 400 214" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 400 304 L 400 348" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="410" y="332" font-size="13" font-weight="500" fill="#16a34a">예</text>
+<path d="M 490 260 L 578 260" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="508" y="250" font-size="13" font-weight="500" fill="#dc2626">아니오</text>
+<path d="M 680 292 L 680 382 L 502 382" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+<text x="690" y="350" font-size="13" font-weight="500" fill="#334155">사유 인정 시</text>
+<path d="M 400 414 L 400 454" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 400 544 L 400 588" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="410" y="572" font-size="13" font-weight="500" fill="#16a34a">예</text>
+<path d="M 510 500 L 578 500" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="522" y="490" font-size="13" font-weight="500" fill="#dc2626">아니오</text>
+<path d="M 780 500 L 830 500 L 830 152 L 502 152" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+<text x="700" y="142" font-size="13" font-weight="500" fill="#334155">다시 제출</text>
+
+<rect x="300" y="120" width="200" height="64" rx="32" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="400" y="158" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">과제 제출</text>
+
+<polygon points="400,216 490,260 400,304 310,260" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="400" y="266" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">마감 전?</text>
+
+<rect x="580" y="228" width="200" height="64" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="680" y="266" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">지각 사유 확인</text>
+
+<rect x="300" y="350" width="200" height="64" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="400" y="388" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">자동 채점</text>
+
+<polygon points="400,456 510,500 400,544 290,500" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="400" y="506" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">기준 점수 이상?</text>
+
+<rect x="580" y="468" width="200" height="64" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="680" y="506" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">보완 피드백</text>
+
+<rect x="300" y="590" width="200" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="400" y="628" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">통과 처리</text>
+</svg>

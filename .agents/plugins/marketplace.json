@@ -1,0 +1,12 @@
+{
+  "name": "one-page-diagrams",
+  "interface": { "displayName": "한 장 그림" },
+  "plugins": [
+    {
+      "name": "one-page-diagrams",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

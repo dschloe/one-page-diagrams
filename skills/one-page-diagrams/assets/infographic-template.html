@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}}</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #ffffff; font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',sans-serif; }
+  .bar { position: fixed; top: 12px; right: 12px; z-index: 10; display: flex; gap: 6px; }
+  .bar button { font: inherit; font-size: 13px; padding: 6px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: #f8fafc; cursor: pointer; }
+  #container { width: 1200px; min-height: 600px; margin: 0 auto; padding: 24px; }
+  #msg { display: none; margin: 40px auto; width: 640px; color: #b91c1c; font-size: 15px; line-height: 1.6; }
+  @media print { .bar { display: none; } }
+  .capture .bar { display: none; }
+</style>
+</head>
+<body>
+<div class="bar">
+  <button onclick="save('png')">PNG로 저장</button>
+  <button onclick="save('svg')">SVG로 저장</button>
+</div>
+<div id="container"></div>
+<p id="msg">그림을 불러오지 못했습니다. 인터넷 연결을 확인한 뒤 새로고침하세요. 이 파일은 AntV Infographic 라이브러리를 인터넷(CDN)에서 불러옵니다.</p>
+
+<script src="https://cdn.jsdelivr.net/npm/@antv/infographic@0.2.20/dist/infographic.min.js"></script>
+<script>
+var SYNTAX = String.raw`{{SYNTAX}}`;
+var infographic = null;
+
+function draw() {
+  if (!window.AntVInfographic) { document.getElementById('msg').style.display = 'block'; return; }
+  if (!infographic) {
+    infographic = new AntVInfographic.Infographic({ container: '#container', width: '100%', height: '100%' });
+  }
+  infographic.render(SYNTAX);
+  document.body.setAttribute('data-rendered', '1');
+}
+
+function save(type) {
+  if (!infographic) return;
+  infographic.toDataURL({ type: type }).then(function (url) {
+    var a = document.createElement('a');
+    a.download = document.title + '.' + type;
+    a.href = url;
+    a.click();
+  });
+}
+
+draw();
+if (document.fonts && document.fonts.ready) { document.fonts.ready.then(draw).catch(function () {}); }
+</script>
+</body>
+</html>

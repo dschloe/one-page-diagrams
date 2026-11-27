@@ -1,0 +1,24 @@
+{
+  "name": "one-page-diagrams",
+  "version": "1.0.0",
+  "description": "Turn a few lines of text into one diagram for slides and reports: infographic, flowchart, draw.io workflow, Excalidraw sketch, architecture. Free, no-install files plus PNG.",
+  "author": { "name": "dschloe", "url": "https://github.com/dschloe" },
+  "homepage": "https://github.com/dschloe/one-page-diagrams",
+  "repository": "https://github.com/dschloe/one-page-diagrams",
+  "license": "MIT",
+  "keywords": ["diagram", "infographic", "flowchart", "drawio", "excalidraw", "korean"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "한 장 그림",
+    "shortDescription": "보고서·강의자료용 그림 한 장 만들기",
+    "developerName": "dschloe",
+    "category": "Productivity",
+    "capabilities": ["Skills"],
+    "websiteURL": "https://github.com/dschloe/one-page-diagrams",
+    "defaultPrompt": [
+      "이 내용을 인포그래픽 한 장으로 만들어줘",
+      "교육 신청 승인 절차를 담당자별 흐름도로 그려줘",
+      "우리 서비스 구성을 구조도로 그려줘"
+    ]
+  }
+}

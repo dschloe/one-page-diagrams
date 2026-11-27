@@ -1,0 +1,11 @@
+{
+  "name": "one-page-diagrams",
+  "displayName": "한 장 그림 (One-Page Diagrams)",
+  "description": "글 몇 줄을 보고서·강의자료용 그림 한 장으로. 인포그래픽, 순서도, draw.io 업무 흐름도, 엑스칼리드로 손그림, 구조도를 무료·무설치 파일과 PNG로 만든다.",
+  "version": "1.0.0",
+  "author": { "name": "dschloe", "url": "https://github.com/dschloe" },
+  "homepage": "https://github.com/dschloe/one-page-diagrams",
+  "repository": "https://github.com/dschloe/one-page-diagrams",
+  "license": "MIT",
+  "keywords": ["diagram", "infographic", "flowchart", "drawio", "excalidraw", "architecture", "korean"]
+}
