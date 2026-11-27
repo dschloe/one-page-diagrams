@@ -1,0 +1,13 @@
+<mxfile host="one-page-diagrams"><diagram name="Page-1"><mxGraphModel adaptiveColors="auto" grid="0" page="0"><root>
+<mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="title" value="구매 요청부터 지급까지" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="30" y="24" width="900" height="40" as="geometry"/></mxCell>
+<mxCell id="lane0" value="요청자" style="swimlane;horizontal=0;startSize=48;html=1;fontSize=15;fontStyle=1;fillColor=#f8fafc;strokeColor=#cbd5e1;swimlaneFillColor=#ffffff;" vertex="1" parent="1"><mxGeometry x="30" y="90" width="768" height="150" as="geometry"/></mxCell>
+<mxCell id="lane1" value="팀장" style="swimlane;horizontal=0;startSize=48;html=1;fontSize=15;fontStyle=1;fillColor=#f8fafc;strokeColor=#cbd5e1;swimlaneFillColor=#ffffff;" vertex="1" parent="1"><mxGeometry x="30" y="240" width="768" height="150" as="geometry"/></mxCell>
+<mxCell id="lane2" value="재무팀" style="swimlane;horizontal=0;startSize=48;html=1;fontSize=15;fontStyle=1;fillColor=#f8fafc;strokeColor=#cbd5e1;swimlaneFillColor=#ffffff;" vertex="1" parent="1"><mxGeometry x="30" y="390" width="768" height="150" as="geometry"/></mxCell>
+<mxCell id="n_req" value="구매 요청" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=2;fontSize=15;fontColor=#0f172a;" vertex="1" parent="lane0"><mxGeometry x="108" y="43" width="140" height="64" as="geometry"/></mxCell>
+<mxCell id="n_appr" value="결재" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;strokeWidth=2;fontSize=15;fontColor=#0f172a;" vertex="1" parent="lane1"><mxGeometry x="338" y="43" width="140" height="64" as="geometry"/></mxCell>
+<mxCell id="n_pay" value="지급" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontSize=15;fontColor=#0f172a;" vertex="1" parent="lane2"><mxGeometry x="568" y="43" width="140" height="64" as="geometry"/></mxCell>
+<mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#475569;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" source="n_req" target="n_appr" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#475569;strokeWidth=2;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" source="n_appr" target="n_pay" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+</root></mxGraphModel></diagram></mxfile>

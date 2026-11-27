@@ -1,19 +1,76 @@
 {
   "title": "교육 신청 승인 절차",
-  "lanes": ["신청자", "팀장", "교육팀"],
+  "direction": "LR",
+  "lanes": [
+    "신청자",
+    "팀장",
+    "교육팀"
+  ],
   "nodes": [
-    {"id": "apply",  "label": "교육 신청",   "lane": "신청자", "col": 0, "kind": "start"},
-    {"id": "review", "label": "신청서 검토", "lane": "팀장",   "col": 1},
-    {"id": "ok",     "label": "승인?",       "lane": "팀장",   "col": 2, "kind": "decision"},
-    {"id": "enroll", "label": "수강 등록",   "lane": "교육팀", "col": 3, "kind": "done"},
-    {"id": "notify", "label": "안내 메일\n발송", "lane": "교육팀", "col": 4},
-    {"id": "reject", "label": "반려 사유\n확인", "lane": "신청자", "col": 3, "kind": "error"}
+    {
+      "id": "apply",
+      "label": "교육 신청",
+      "lane": "신청자",
+      "col": 0,
+      "kind": "start"
+    },
+    {
+      "id": "review",
+      "label": "검토",
+      "lane": "팀장",
+      "col": 1
+    },
+    {
+      "id": "ok",
+      "label": "승인?",
+      "lane": "팀장",
+      "col": 2,
+      "kind": "decision"
+    },
+    {
+      "id": "enroll",
+      "label": "수강 등록",
+      "lane": "교육팀",
+      "col": 3,
+      "kind": "done"
+    },
+    {
+      "id": "notify",
+      "label": "안내 메일\n발송",
+      "lane": "교육팀",
+      "col": 4
+    },
+    {
+      "id": "reject",
+      "label": "반려 사유\n확인",
+      "lane": "신청자",
+      "col": 3,
+      "kind": "error"
+    }
   ],
   "edges": [
-    {"from": "apply",  "to": "review"},
-    {"from": "review", "to": "ok"},
-    {"from": "ok",     "to": "enroll", "label": "예"},
-    {"from": "enroll", "to": "notify"},
-    {"from": "ok",     "to": "reject", "label": "아니오", "dashed": true}
+    {
+      "from": "apply",
+      "to": "review"
+    },
+    {
+      "from": "review",
+      "to": "ok"
+    },
+    {
+      "from": "ok",
+      "to": "enroll",
+      "label": "승인"
+    },
+    {
+      "from": "enroll",
+      "to": "notify"
+    },
+    {
+      "from": "ok",
+      "to": "reject",
+      "label": "반려",
+      "dashed": true
+    }
   ]
 }

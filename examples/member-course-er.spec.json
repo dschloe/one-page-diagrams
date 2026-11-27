@@ -1,0 +1,39 @@
+{
+  "title": "회원 · 수강신청 · 과정",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "m",
+      "label": "회원\n회원ID, 이름, 이메일",
+      "row": 0,
+      "col": 0,
+      "kind": "step"
+    },
+    {
+      "id": "e",
+      "label": "수강신청\n신청ID, 회원ID, 과정ID",
+      "row": 0,
+      "col": 2,
+      "kind": "step"
+    },
+    {
+      "id": "c",
+      "label": "과정\n과정ID, 과정명",
+      "row": 0,
+      "col": 4,
+      "kind": "step"
+    }
+  ],
+  "edges": [
+    {
+      "from": "m",
+      "to": "e",
+      "label": "1:N"
+    },
+    {
+      "from": "e",
+      "to": "c",
+      "label": "N:1"
+    }
+  ]
+}

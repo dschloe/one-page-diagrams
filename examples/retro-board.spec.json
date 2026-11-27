@@ -1,0 +1,29 @@
+{
+  "title": "팀 회고",
+  "direction": "LR",
+  "roughness": 1,
+  "nodes": [
+    {
+      "id": "a",
+      "label": "잘한 점",
+      "row": 0,
+      "col": 0,
+      "kind": "done"
+    },
+    {
+      "id": "b",
+      "label": "아쉬운 점",
+      "row": 0,
+      "col": 1,
+      "kind": "error"
+    },
+    {
+      "id": "c",
+      "label": "다음에 할 일",
+      "row": 0,
+      "col": 2,
+      "kind": "data"
+    }
+  ],
+  "edges": []
+}

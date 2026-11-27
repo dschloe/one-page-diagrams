@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>one-page-diagrams 프로젝트 구조</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+    background: #ffffff; color: #0f172a; padding: 32px;
+  }
+  #capture { width: 1200px; margin: 0 auto; background: #ffffff; padding: 8px; }
+  .head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 16px; }
+  h1 { font-size: 26px; font-weight: 700; }
+  .sub { color: #475569; font-size: 15px; margin-top: 6px; }
+  .btn { font: inherit; font-size: 13px; padding: 6px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: #f8fafc; cursor: pointer; }
+  .frame { border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; }
+  #diagram { display: block; width: 100%; height: auto; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+  .card { border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; }
+  .card h3 { font-size: 15px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .card li { font-size: 13px; color: #475569; margin-left: 16px; margin-bottom: 4px; }
+  .foot { color: #94a3b8; font-size: 12px; margin-top: 12px; text-align: right; }
+  @media print { .btn { display: none; } }
+  .capture .btn { display: none; }
+  .capture body { padding: 16px; } .capture #capture { margin: 0; }
+</style>
+</head>
+<body>
+<div id="capture">
+  <div class="head">
+    <div>
+      <h1>one-page-diagrams 프로젝트 구조</h1>
+      <p class="sub">SKILL.md가 방식을 고르고, 스크립트가 파일과 PNG를 만든다</p>
+    </div>
+    <button class="btn" onclick="savePng()">PNG로 저장</button>
+  </div>
+
+  <div class="frame">
+    <svg id="diagram" xmlns="http://www.w3.org/2000/svg" viewBox="20 90 1070 476">
+      <style>text { font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',sans-serif; }</style>
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+          <polygon points="0 0, 10 4, 0 8" fill="#475569"/>
+        </marker>
+      </defs>
+      <rect width="1160" height="620" fill="#ffffff"/>
+      <path d="M 220 290 L 308 290" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 510 290 L 578 290" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 510 290 L 545 290 L 545 145 L 578 145" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 510 290 L 545 290 L 545 445 L 578 445" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 800 290 L 868 290" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 800 445 L 835 445 L 835 310 L 868 310" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="255" width="180" height="70" rx="10" fill="#ffffff"/>
+<rect x="40" y="255" width="180" height="70" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="130.0" y="288.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">사용자 요청</text>
+<text x="130.0" y="308.0" font-size="12" fill="#475569" text-anchor="middle">글 몇 줄</text>
+<rect x="310" y="245" width="200" height="90" rx="10" fill="#ffffff"/>
+<rect x="310" y="245" width="200" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+<text x="410.0" y="288.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle" style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace">SKILL.md</text>
+<text x="410.0" y="308.0" font-size="12" fill="#475569" text-anchor="middle">방식 고르기 · 공통 규칙</text>
+<rect x="580" y="110" width="220" height="70" rx="10" fill="#ffffff"/>
+<rect x="580" y="110" width="220" height="70" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="690.0" y="143.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle" style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace">references/</text>
+<text x="690.0" y="163.0" font-size="12" fill="#475569" text-anchor="middle">방식별 규칙 5개</text>
+<rect x="580" y="255" width="220" height="70" rx="10" fill="#ffffff"/>
+<rect x="580" y="255" width="220" height="70" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="690.0" y="288.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle" style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace">assets/</text>
+<text x="690.0" y="308.0" font-size="12" fill="#475569" text-anchor="middle">인포그래픽·구조도 HTML 틀</text>
+<rect x="580" y="400" width="220" height="90" rx="10" fill="#ffffff"/>
+<rect x="580" y="400" width="220" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+<text x="690.0" y="443.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle" style="font-family:'SF Mono','Cascadia Code',Consolas,Menlo,monospace">scripts/</text>
+<text x="690.0" y="463.0" font-size="12" fill="#475569" text-anchor="middle">build · check · to_png · drawio_link</text>
+<rect x="870" y="255" width="200" height="70" rx="10" fill="#ffffff"/>
+<rect x="870" y="255" width="200" height="70" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+<text x="970.0" y="288.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">결과 파일</text>
+<text x="970.0" y="308.0" font-size="12" fill="#475569" text-anchor="middle">원본 + PNG</text>
+<rect x="40" y="530" width="16" height="16" rx="3" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="64" y="543" font-size="13" fill="#475569">요청</text>
+<rect x="180" y="530" width="16" height="16" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+<text x="204" y="543" font-size="13" fill="#475569">규칙·스크립트</text>
+<rect x="320" y="530" width="16" height="16" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="344" y="543" font-size="13" fill="#475569">참고 자료</text>
+<rect x="460" y="530" width="16" height="16" rx="3" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+<text x="484" y="543" font-size="13" fill="#475569">결과</text>
+
+    </svg>
+  </div>
+
+  <div class="cards">
+    <div class="card"><h3><span class="dot" style="background:#059669"></span>구성</h3>
+<ul><li>SKILL.md: 방식 고르기와 공통 규칙</li><li>references/: 방식별 규칙 5개</li><li>assets/: 인포그래픽·구조도 HTML 틀</li><li>scripts/: build, check, to_png, drawio_link</li></ul></div>
+<div class="card"><h3><span class="dot" style="background:#0891b2"></span>결과</h3>
+<ul><li>HTML, SVG, .drawio, .excalidraw 원본</li><li>PNG 이미지</li></ul></div>
+<div class="card"><h3><span class="dot" style="background:#64748b"></span>필요한 것</h3>
+<ul><li>유료 API, 이미지 생성 모델, 로그인, 별도 설치 없음</li><li>PNG 변환에는 PC의 Chrome이나 Edge</li></ul></div>
+  </div>
+  <p class="foot"></p>
+</div>
+
+<script>
+function savePng() {
+  var svg = document.getElementById('diagram');
+  var vb = svg.viewBox.baseVal;
+  var scale = 2;
+  var xml = new XMLSerializer().serializeToString(svg);
+  var img = new Image();
+  img.onload = function () {
+    var c = document.createElement('canvas');
+    c.width = vb.width * scale; c.height = vb.height * scale;
+    var ctx = c.getContext('2d');
+    ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, c.width, c.height);
+    ctx.drawImage(img, 0, 0, c.width, c.height);
+    var a = document.createElement('a');
+    a.download = (document.title || 'diagram') + '.png';
+    a.href = c.toDataURL('image/png');
+    a.click();
+  };
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(xml);
+}
+</script>
+</body>
+</html>

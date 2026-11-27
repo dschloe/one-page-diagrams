@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>사내 교육 플랫폼 구조</title>
+<title>사내 교육 플랫폼 구조도</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -32,14 +32,14 @@
 <div id="capture">
   <div class="head">
     <div>
-      <h1>사내 교육 플랫폼 구조</h1>
-      <p class="sub">모든 요청은 API 서버 한 곳을 거친다 (예시 구성)</p>
+      <h1>사내 교육 플랫폼 구조도</h1>
+      <p class="sub">두 화면 모두 API 서버를 거친다</p>
     </div>
     <button class="btn" onclick="savePng()">PNG로 저장</button>
   </div>
 
   <div class="frame">
-    <svg id="diagram" xmlns="http://www.w3.org/2000/svg" viewBox="20 60 1080 520">
+    <svg id="diagram" xmlns="http://www.w3.org/2000/svg" viewBox="20 90 1060 436">
       <style>text { font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',sans-serif; }</style>
       <defs>
         <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
@@ -47,18 +47,14 @@
         </marker>
       </defs>
       <rect width="1160" height="620" fill="#ffffff"/>
-      <rect x="285" y="80" width="800" height="420" rx="14" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="8,5"/>
-<text x="301" y="104" font-size="14" font-weight="600" fill="#d97706">클라우드 영역</text>
-<path d="M 220 210 L 308 210" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M 220 210 L 308 210" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <path d="M 220 410 L 308 410" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <path d="M 510 210 L 545 210 L 545 300 L 578 300" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <path d="M 510 410 L 545 410 L 545 350 L 578 350" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 <path d="M 680 280 L 680 182" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
-<text x="690" y="236" font-size="13" font-weight="500" fill="#e11d48">로그인 확인</text>
+<text x="692" y="236" font-size="13" font-weight="500" fill="#e11d48">인증 확인</text>
 <path d="M 780 305 L 820 305 L 820 245 L 858 245" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
-<text x="786" y="296" font-size="13" font-weight="500" fill="#334155">기록</text>
 <path d="M 780 345 L 820 345 L 820 415 L 858 415" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
-<text x="786" y="336" font-size="13" font-weight="500" fill="#334155">자료</text>
 <rect x="40" y="175" width="180" height="70" rx="10" fill="#ffffff"/>
 <rect x="40" y="175" width="180" height="70" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
 <text x="130.0" y="216.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">수강생</text>
@@ -67,50 +63,49 @@
 <text x="130.0" y="416.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">강사·관리자</text>
 <rect x="310" y="175" width="200" height="70" rx="10" fill="#ffffff"/>
 <rect x="310" y="175" width="200" height="70" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
-<text x="410.0" y="208.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">수강생 웹</text>
-<text x="410.0" y="228.0" font-size="12" fill="#475569" text-anchor="middle">웹 브라우저</text>
+<text x="410.0" y="216.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">수강생 웹</text>
 <rect x="310" y="375" width="200" height="70" rx="10" fill="#ffffff"/>
 <rect x="310" y="375" width="200" height="70" rx="10" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
-<text x="410.0" y="408.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">관리자 화면</text>
-<text x="410.0" y="428.0" font-size="12" fill="#475569" text-anchor="middle">과정·수강생 관리</text>
+<text x="410.0" y="416.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">관리자 화면</text>
 <rect x="580" y="110" width="200" height="70" rx="10" fill="#ffffff"/>
 <rect x="580" y="110" width="200" height="70" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
 <text x="680.0" y="143.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">인증</text>
 <text x="680.0" y="163.0" font-size="12" fill="#475569" text-anchor="middle">사내 계정 로그인</text>
 <rect x="580" y="280" width="200" height="90" rx="10" fill="#ffffff"/>
 <rect x="580" y="280" width="200" height="90" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
-<text x="680.0" y="323.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">API 서버</text>
-<text x="680.0" y="343.0" font-size="12" fill="#475569" text-anchor="middle">신청·출결·과제</text>
-<path d="M 860 212 L 860 278 A 100.0 12 0 0 0 1060 278 L 1060 212" fill="#ffffff"/>
-<ellipse cx="960.0" cy="212" rx="100.0" ry="12" fill="#ffffff"/>
-<path d="M 860 212 L 860 278 A 100.0 12 0 0 0 1060 278 L 1060 212" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
-<ellipse cx="960.0" cy="212" rx="100.0" ry="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
-<text x="960.0" y="256" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">수강 기록 DB</text>
+<text x="680.0" y="331.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">API 서버</text>
+<path d="M 860 212 L 860 278 A 100 12 0 0 0 1060 278 L 1060 212" fill="#ffffff"/>
+<ellipse cx="960" cy="212" rx="100" ry="12" fill="#ffffff"/>
+<path d="M 860 212 L 860 278 A 100 12 0 0 0 1060 278 L 1060 212" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<ellipse cx="960" cy="212" rx="100" ry="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="960" y="256" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">수강 기록 DB</text>
 <rect x="860" y="380" width="200" height="70" rx="10" fill="#ffffff"/>
 <rect x="860" y="380" width="200" height="70" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
 <text x="960.0" y="413.0" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">자료 저장소</text>
 <text x="960.0" y="433.0" font-size="12" fill="#475569" text-anchor="middle">PDF·영상</text>
-<rect x="40" y="540" width="16" height="16" rx="3" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
-<text x="64" y="553" font-size="13" fill="#475569">화면</text>
-<rect x="130" y="540" width="16" height="16" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
-<text x="154" y="553" font-size="13" fill="#475569">서버</text>
-<rect x="220" y="540" width="16" height="16" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
-<text x="244" y="553" font-size="13" fill="#475569">데이터</text>
-<rect x="310" y="540" width="16" height="16" rx="3" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5"/>
-<text x="334" y="553" font-size="13" fill="#475569">보안</text>
+<rect x="40" y="490" width="16" height="16" rx="3" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="64" y="503" font-size="13" fill="#475569">사용자</text>
+<rect x="140" y="490" width="16" height="16" rx="3" fill="#cffafe" stroke="#0891b2" stroke-width="1.5"/>
+<text x="164" y="503" font-size="13" fill="#475569">화면</text>
+<rect x="240" y="490" width="16" height="16" rx="3" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+<text x="264" y="503" font-size="13" fill="#475569">서버</text>
+<rect x="340" y="490" width="16" height="16" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="364" y="503" font-size="13" fill="#475569">데이터</text>
+<rect x="440" y="490" width="16" height="16" rx="3" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5"/>
+<text x="464" y="503" font-size="13" fill="#475569">인증</text>
 
     </svg>
   </div>
 
   <div class="cards">
     <div class="card"><h3><span class="dot" style="background:#0891b2"></span>구성</h3>
-<ul><li>수강생 웹, 관리자 화면</li><li>API 서버 1대, 인증</li><li>수강 기록 DB, 자료 저장소</li></ul></div>
+<ul><li>수강생 웹, 관리자 화면</li><li>API 서버, 인증</li><li>수강 기록 DB, 자료 저장소</li></ul></div>
 <div class="card"><h3><span class="dot" style="background:#059669"></span>데이터 흐름</h3>
-<ul><li>신청·출결·과제는 API 서버를 거쳐 DB에 기록</li><li>강의 자료는 저장소에서 내려받기</li></ul></div>
-<div class="card"><h3><span class="dot" style="background:#e11d48"></span>보안</h3>
-<ul><li>모든 요청은 사내 계정 로그인 확인 후 처리</li><li>관리자 화면은 강사·관리자만 접근</li></ul></div>
+<ul><li>수강생은 수강생 웹, 강사·관리자는 관리자 화면을 쓴다</li><li>두 화면 모두 API 서버를 거친다</li><li>API 서버가 수강 기록 DB와 자료 저장소(PDF·영상)에 접근한다</li></ul></div>
+<div class="card"><h3><span class="dot" style="background:#e11d48"></span>인증</h3>
+<ul><li>API 서버가 인증을 확인한다</li><li>사내 계정으로 로그인한다</li></ul></div>
   </div>
-  <p class="foot">one-page-diagrams 예시</p>
+  <p class="foot"></p>
 </div>
 
 <script>

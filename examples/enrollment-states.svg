@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 440" width="1220" height="440">
+  <style>text { font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',sans-serif; }</style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1220" height="440" fill="#ffffff"/>
+  <path d="M 72 250 L 110 250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 260 250 L 320 250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 470 250 L 530 250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 395 278 L 395 370 L 530 370" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 680 250 L 740 250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 890 250 L 950 250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1100 250 L 1146 250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 680 370 L 726 370" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="60" cy="250" r="12" fill="#0f172a"/>
+  <circle cx="1160" cy="250" r="14" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="1160" cy="250" r="7" fill="#0f172a"/>
+  <circle cx="740" cy="370" r="14" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="740" cy="370" r="7" fill="#0f172a"/>
+  <rect x="110" y="222" width="150" height="56" rx="28" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="185" y="256" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">신청</text>
+  <rect x="320" y="222" width="150" height="56" rx="28" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="395" y="256" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">승인 대기</text>
+  <rect x="530" y="222" width="150" height="56" rx="28" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="256" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">승인</text>
+  <rect x="530" y="342" width="150" height="56" rx="28" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="605" y="376" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">반려</text>
+  <rect x="740" y="222" width="150" height="56" rx="28" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="815" y="256" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">수강 중</text>
+  <rect x="950" y="222" width="150" height="56" rx="28" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="1025" y="256" font-size="17" font-weight="600" fill="#0f172a" text-anchor="middle">수료</text>
+  <text x="40" y="56" font-size="26" font-weight="700" fill="#0f172a">승인을 받아야 수강 중과 수료로 넘어간다</text>
+  <text x="40" y="84" font-size="15" font-weight="400" fill="#475569">수강 신청 상태도</text>
+</svg>

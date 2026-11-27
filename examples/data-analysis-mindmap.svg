@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <style>text { font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR','Noto Sans CJK KR',sans-serif; }</style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+  <path d="M 390 300 C 330 290, 340 200, 290 200" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <path d="M 610 300 C 670 290, 660 200, 710 200" fill="none" stroke="#7c3aed" stroke-width="3"/>
+  <path d="M 390 340 C 330 350, 340 440, 290 440" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <path d="M 610 340 C 670 350, 660 440, 710 440" fill="none" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="500" cy="320" rx="130" ry="46" fill="#0f172a"/>
+  <text x="500" y="326" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">데이터 분석 입문</text>
+  <rect x="110" y="172" width="180" height="56" rx="28" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="206" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">데이터 수집</text>
+  <rect x="710" y="172" width="180" height="56" rx="28" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="800" y="206" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">전처리</text>
+  <rect x="110" y="412" width="180" height="56" rx="28" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="446" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">시각화</text>
+  <rect x="710" y="412" width="180" height="56" rx="28" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="800" y="446" font-size="16" font-weight="600" fill="#0f172a" text-anchor="middle">모델링</text>
+  <text x="40" y="56" font-size="26" font-weight="700" fill="#0f172a">데이터 분석 입문은 네 갈래로 나뉜다</text>
+  <text x="40" y="84" font-size="15" font-weight="400" fill="#475569">강의 내용 마인드맵</text>
+</svg>

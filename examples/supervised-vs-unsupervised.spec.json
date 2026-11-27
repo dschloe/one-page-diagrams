@@ -1,0 +1,65 @@
+{
+  "title": "지도학습과 비지도학습의 차이",
+  "direction": "LR",
+  "roughness": 1,
+  "nodes": [
+    {
+      "id": "s",
+      "label": "지도학습",
+      "row": 0,
+      "col": 0,
+      "kind": "start"
+    },
+    {
+      "id": "s1",
+      "label": "정답이 있는\n데이터로 학습",
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "s2",
+      "label": "새 데이터의\n정답 예측",
+      "row": 0,
+      "col": 2,
+      "kind": "done"
+    },
+    {
+      "id": "u",
+      "label": "비지도학습",
+      "row": 1,
+      "col": 0,
+      "kind": "start"
+    },
+    {
+      "id": "u1",
+      "label": "정답이 없는\n데이터로 학습",
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": "u2",
+      "label": "비슷한 것끼리\n묶기",
+      "row": 1,
+      "col": 2,
+      "kind": "done"
+    }
+  ],
+  "edges": [
+    {
+      "from": "s",
+      "to": "s1"
+    },
+    {
+      "from": "s1",
+      "to": "s2"
+    },
+    {
+      "from": "u",
+      "to": "u1"
+    },
+    {
+      "from": "u1",
+      "to": "u2"
+    }
+  ]
+}

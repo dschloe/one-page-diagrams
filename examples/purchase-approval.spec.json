@@ -1,0 +1,41 @@
+{
+  "title": "구매 요청부터 지급까지",
+  "direction": "LR",
+  "lanes": [
+    "요청자",
+    "팀장",
+    "재무팀"
+  ],
+  "nodes": [
+    {
+      "id": "req",
+      "label": "구매 요청",
+      "lane": "요청자",
+      "col": 0,
+      "kind": "start"
+    },
+    {
+      "id": "appr",
+      "label": "결재",
+      "lane": "팀장",
+      "col": 1
+    },
+    {
+      "id": "pay",
+      "label": "지급",
+      "lane": "재무팀",
+      "col": 2,
+      "kind": "done"
+    }
+  ],
+  "edges": [
+    {
+      "from": "req",
+      "to": "appr"
+    },
+    {
+      "from": "appr",
+      "to": "pay"
+    }
+  ]
+}

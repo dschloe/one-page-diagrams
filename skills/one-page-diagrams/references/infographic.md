@@ -70,9 +70,9 @@ data
   order asc
 ```
 
-두 대상 비교:
+두 대상 비교(양쪽 이름이 그림에 보인다):
 ```infographic
-infographic compare-binary-horizontal-badge-card-arrow
+infographic compare-hierarchy-left-right-circle-node-pill-badge
 data
   title 온라인과 오프라인 과정 비교
   compares
@@ -163,7 +163,8 @@ data
 - 순서, 단계, 절차, 로드맵, 타임라인: `sequence-ascending-steps`, `sequence-snake-steps-simple`, `sequence-timeline-simple`, `sequence-roadmap-vertical-simple`, `sequence-stairs-front-compact-card`, `sequence-funnel-simple`(깔때기), `sequence-pyramid-simple`(피라미드), `sequence-circular-simple`(순환)
 - 여러 사람·시스템이 주고받는 흐름: `sequence-interaction-default-badge-card`, `sequence-interaction-default-compact-card`
 - 나란한 요점: `list-row-horizontal-icon-arrow`, `list-grid-badge-card`, `list-grid-candy-card-lite`, `list-column-vertical-icon-arrow`, `list-column-done-list`(체크리스트), `list-zigzag-down-simple`
-- 두 대상 비교: `compare-binary-horizontal-badge-card-arrow`, `compare-binary-horizontal-simple-fold`, `compare-binary-horizontal-underline-text-vs`
+- 두 대상 비교(A와 B): `compare-hierarchy-left-right-circle-node-pill-badge`. 양쪽 이름(`label`)이 그림에 나온다.
+- 장단점(Pros/Cons): `compare-binary-horizontal-badge-card-arrow`, `compare-binary-horizontal-simple-fold`, `compare-binary-horizontal-underline-text-vs`. 이 세 틀은 양쪽 `label`을 그리지 않고 Pros·Cons·VS만 보여 주므로, 이름이 다른 두 대상의 비교에는 쓰지 않는다.
 - SWOT: `compare-swot` / 사분면: `compare-quadrant-quarter-simple-card`, `compare-quadrant-quarter-circular`
 - 계층, 조직도: `hierarchy-tree-curved-line-rounded-rect-node`, `hierarchy-tree-tech-style-badge-card`, `hierarchy-structure`
 - 마인드맵: `hierarchy-mindmap-branch-gradient-capsule-item`, `hierarchy-mindmap-level-gradient-compact-card`

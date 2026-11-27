@@ -8,7 +8,7 @@
    "type": "text",
    "x": 30,
    "y": 30,
-   "width": 280.0,
+   "width": 324.8,
    "height": 35.0,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -26,16 +26,16 @@
    "versionNonce": 239081664,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
-   "text": "RAG는 이렇게 답한다",
+   "text": "RAG가 답을 만드는 과정",
    "fontSize": 28,
    "fontFamily": 5,
    "textAlign": "left",
    "verticalAlign": "top",
    "containerId": null,
-   "originalText": "RAG는 이렇게 답한다",
+   "originalText": "RAG가 답을 만드는 과정",
    "lineHeight": 1.25,
    "autoResize": true
   },
@@ -73,7 +73,7 @@
      "id": "arrow0"
     }
    ],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false
   },
@@ -100,7 +100,7 @@
    "versionNonce": 525901257,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "text": "질문",
@@ -152,10 +152,10 @@
     },
     {
      "type": "arrow",
-     "id": "arrow3"
+     "id": "arrow2"
     }
    ],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false
   },
@@ -182,7 +182,7 @@
    "versionNonce": 220106708,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "text": "문서 검색",
@@ -227,13 +227,9 @@
     {
      "type": "arrow",
      "id": "arrow1"
-    },
-    {
-     "type": "arrow",
-     "id": "arrow2"
     }
    ],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false
   },
@@ -260,7 +256,7 @@
    "versionNonce": 1171165723,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "text": "사내 문서",
@@ -275,14 +271,14 @@
   },
   {
    "id": "llm",
-   "type": "diamond",
+   "type": "rectangle",
    "x": 515.8,
-   "y": 113.0,
+   "y": 119.2,
    "width": 178.4,
-   "height": 84,
+   "height": 71.6,
    "angle": 0,
    "strokeColor": "#1e1e1e",
-   "backgroundColor": "#ffec99",
+   "backgroundColor": "#e9ecef",
    "fillStyle": "hachure",
    "strokeWidth": 2,
    "strokeStyle": "solid",
@@ -291,7 +287,7 @@
    "groupIds": [],
    "frameId": null,
    "roundness": {
-    "type": 2
+    "type": 3
    },
    "seed": 186699714,
    "version": 1,
@@ -309,13 +305,9 @@
     {
      "type": "arrow",
      "id": "arrow3"
-    },
-    {
-     "type": "arrow",
-     "id": "arrow4"
     }
    ],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false
   },
@@ -342,7 +334,7 @@
    "versionNonce": 68252794,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "text": "LLM\n(검색 결과 참고)",
@@ -386,10 +378,10 @@
     },
     {
      "type": "arrow",
-     "id": "arrow4"
+     "id": "arrow3"
     }
    ],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false
   },
@@ -416,7 +408,7 @@
    "versionNonce": 499635469,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "text": "근거 있는 답변",
@@ -454,7 +446,7 @@
    "versionNonce": 1292825379,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "points": [
@@ -512,7 +504,7 @@
      "id": "arrow1-t"
     }
    ],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "points": [
@@ -543,9 +535,9 @@
   {
    "id": "arrow1-t",
    "type": "text",
-   "x": 359.0,
+   "x": 317.4,
    "y": 210.0,
-   "width": 32.0,
+   "width": 115.2,
    "height": 20.0,
    "angle": 0,
    "strokeColor": "#1e1e1e",
@@ -563,119 +555,21 @@
    "versionNonce": 1537640409,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
-   "text": "찾기",
+   "text": "관련 문단 찾기",
    "fontSize": 16,
    "fontFamily": 5,
    "textAlign": "center",
    "verticalAlign": "middle",
    "containerId": "arrow1",
-   "originalText": "찾기",
+   "originalText": "관련 문단 찾기",
    "lineHeight": 1.25,
    "autoResize": true
   },
   {
    "id": "arrow2",
-   "type": "arrow",
-   "x": 445.0,
-   "y": 285.0,
-   "width": 160.0,
-   "height": 88.0,
-   "angle": 0,
-   "strokeColor": "#1e1e1e",
-   "backgroundColor": "transparent",
-   "fillStyle": "solid",
-   "strokeWidth": 2,
-   "strokeStyle": "dashed",
-   "roughness": 1,
-   "opacity": 100,
-   "groupIds": [],
-   "frameId": null,
-   "roundness": {
-    "type": 2
-   },
-   "seed": 1395616197,
-   "version": 1,
-   "versionNonce": 1506083911,
-   "isDeleted": false,
-   "boundElements": [
-    {
-     "type": "text",
-     "id": "arrow2-t"
-    }
-   ],
-   "updated": 1795742311233,
-   "link": null,
-   "locked": false,
-   "points": [
-    [
-     0,
-     0
-    ],
-    [
-     160.0,
-     0
-    ],
-    [
-     160.0,
-     -88.0
-    ]
-   ],
-   "lastCommittedPoint": null,
-   "startBinding": {
-    "elementId": "db",
-    "focus": 0,
-    "gap": 4
-   },
-   "endBinding": {
-    "elementId": "llm",
-    "focus": 0,
-    "gap": 4
-   },
-   "startArrowhead": null,
-   "endArrowhead": "arrow",
-   "elbowed": false
-  },
-  {
-   "id": "arrow2-t",
-   "type": "text",
-   "x": 488.2,
-   "y": 275.0,
-   "width": 73.6,
-   "height": 20.0,
-   "angle": 0,
-   "strokeColor": "#1e1e1e",
-   "backgroundColor": "transparent",
-   "fillStyle": "solid",
-   "strokeWidth": 2,
-   "strokeStyle": "solid",
-   "roughness": 1,
-   "opacity": 100,
-   "groupIds": [],
-   "frameId": null,
-   "roundness": null,
-   "seed": 1170252924,
-   "version": 1,
-   "versionNonce": 900911955,
-   "isDeleted": false,
-   "boundElements": [],
-   "updated": 1795742311233,
-   "link": null,
-   "locked": false,
-   "text": "관련 문단",
-   "fontSize": 16,
-   "fontFamily": 5,
-   "textAlign": "center",
-   "verticalAlign": "middle",
-   "containerId": "arrow2",
-   "originalText": "관련 문단",
-   "lineHeight": 1.25,
-   "autoResize": true
-  },
-  {
-   "id": "arrow3",
    "type": "arrow",
    "x": 445.0,
    "y": 155.0,
@@ -694,12 +588,12 @@
    "roundness": {
     "type": 2
    },
-   "seed": 473392625,
+   "seed": 1395616197,
    "version": 1,
-   "versionNonce": 964669078,
+   "versionNonce": 1506083911,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "points": [
@@ -728,7 +622,7 @@
    "elbowed": false
   },
   {
-   "id": "arrow4",
+   "id": "arrow3",
    "type": "arrow",
    "x": 694.2,
    "y": 155.0,
@@ -747,12 +641,12 @@
    "roundness": {
     "type": 2
    },
-   "seed": 1265438423,
+   "seed": 1170252924,
    "version": 1,
-   "versionNonce": 597409993,
+   "versionNonce": 900911955,
    "isDeleted": false,
    "boundElements": [],
-   "updated": 1795742311233,
+   "updated": 1795748210316,
    "link": null,
    "locked": false,
    "points": [

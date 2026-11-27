@@ -27,7 +27,7 @@ import sys
 import tempfile
 
 DRAWIO_VIEWER = os.environ.get("ONEPAGE_DRAWIO_VIEWER_JS", "https://viewer.diagrams.net/js/viewer-static.min.js")
-EXCALIDRAW_ESM = os.environ.get("ONEPAGE_EXCALIDRAW_ESM", "https://esm.sh/@excalidraw/excalidraw@0.18.1?bundle")
+EXCALIDRAW_ESM = os.environ.get("ONEPAGE_EXCALIDRAW_ESM", "https://esm.sh/@excalidraw/excalidraw@0.18.1")
 PAD = 24
 
 FALLBACK = {
@@ -193,11 +193,11 @@ def prepare(src, tmpdir, scale=2):
         return page, 2400, 2000, 25000, True
     if ext == ".excalidraw":
         scene = json.loads(text)
-        doc = (f'{head}#out svg{{display:block}}</style></head><body><div id="out"></div>'
+        doc = (f'{head}#out svg{{display:block}}#out svg text{{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans CJK KR",sans-serif}}</style></head><body><div id="out"></div>'
                f'<script type="module">import {{ exportToSvg }} from "{EXCALIDRAW_ESM}";\n'
                f'const scene = {json.dumps(scene, ensure_ascii=False)};\n'
                'const svg = await exportToSvg({ elements: scene.elements, files: scene.files || {}, '
-               'appState: Object.assign({}, scene.appState || {}, { exportBackground: true, exportPadding: 24, exportScale: ' + str(scale) + ' }) });\n'
+               'appState: Object.assign({}, scene.appState || {}, { exportBackground: true, exportPadding: 24, exportScale: ' + str(scale) + ' }), skipInliningFonts: true });\n'
                'document.getElementById("out").appendChild(svg);\n'
                f'</script>{PROBE}</body></html>')
         open(page, "w", encoding="utf-8").write(doc)

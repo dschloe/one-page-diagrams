@@ -1,19 +1,59 @@
 {
-  "title": "RAG는 이렇게 답한다",
+  "title": "RAG가 답을 만드는 과정",
   "direction": "LR",
   "roughness": 1,
   "nodes": [
-    {"id": "q",   "label": "질문",          "row": 0, "col": 0, "kind": "start"},
-    {"id": "s",   "label": "문서 검색",     "row": 0, "col": 1},
-    {"id": "db",  "label": "사내 문서",     "row": 1, "col": 1, "kind": "data"},
-    {"id": "llm", "label": "LLM\n(검색 결과 참고)", "row": 0, "col": 2, "kind": "decision"},
-    {"id": "a",   "label": "근거 있는 답변", "row": 0, "col": 3, "kind": "done"}
+    {
+      "id": "q",
+      "label": "질문",
+      "row": 0,
+      "col": 0,
+      "kind": "start"
+    },
+    {
+      "id": "s",
+      "label": "문서 검색",
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "db",
+      "label": "사내 문서",
+      "row": 1,
+      "col": 1,
+      "kind": "data"
+    },
+    {
+      "id": "llm",
+      "label": "LLM\n(검색 결과 참고)",
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": "a",
+      "label": "근거 있는 답변",
+      "row": 0,
+      "col": 3,
+      "kind": "done"
+    }
   ],
   "edges": [
-    {"from": "q",   "to": "s"},
-    {"from": "s",   "to": "db",  "label": "찾기"},
-    {"from": "db",  "to": "llm", "label": "관련 문단", "dashed": true},
-    {"from": "s",   "to": "llm"},
-    {"from": "llm", "to": "a"}
+    {
+      "from": "q",
+      "to": "s"
+    },
+    {
+      "from": "s",
+      "to": "db",
+      "label": "관련 문단 찾기"
+    },
+    {
+      "from": "s",
+      "to": "llm"
+    },
+    {
+      "from": "llm",
+      "to": "a"
+    }
   ]
 }
