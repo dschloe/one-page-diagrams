@@ -70,4 +70,5 @@
 
 - ".excalidraw 파일을 https://excalidraw.com 에서 열면 함께 그리며 고칠 수 있습니다. 공유 버튼으로 수강생과 실시간 협업도 됩니다."
 - PNG를 못 만들었으면: "excalidraw.com에서 메뉴 → 이미지 내보내기 → PNG로 받을 수 있습니다."
-- 한글은 excalidraw 손글씨 글꼴에 없어서 시스템 글꼴로 보인다.
+- PNG는 스킬에 든 한글 손글씨 글꼴(Gaegu, `assets/fonts/`)로 만든다. 인터넷에서 글꼴을 받지 않는다.
+- excalidraw.com에서 `.excalidraw` 파일을 열면 그 사이트의 글꼴로 보인다. 한글은 excalidraw 손글씨 글꼴에 없어서 시스템 글꼴로 보인다.

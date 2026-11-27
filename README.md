@@ -250,7 +250,7 @@ Windows에서는 `python3` 대신 `python` 또는 `py`를 씁니다.
 스킬은 외부 서버에 그림 내용을 보내지 않습니다. 다만 draw.io **편집 링크**는 그림 내용이 링크 주소 안에 들어 있으니, 사내 정보가 담긴 링크는 공유하지 마세요. PNG 변환 시 브라우저는 그리기 라이브러리(AntV, draw.io 뷰어, Excalidraw)만 인터넷에서 내려받습니다.
 
 **한글이 깨지나요?**
-SVG·구조도는 PC의 한글 글꼴(맑은 고딕, Apple SD 산돌고딕 Neo, Noto Sans KR 등)을 씁니다. 엑스칼리드로 손글씨 글꼴에는 한글이 없어 한글은 시스템 글꼴로 보입니다.
+SVG·구조도는 PC의 한글 글꼴(맑은 고딕, Apple SD 산돌고딕 Neo, Noto Sans KR 등)을 씁니다. 엑스칼리드로 그림의 PNG는 스킬에 들어 있는 한글 손글씨 글꼴(Gaegu, OFL)로 만듭니다. excalidraw.com에서 파일을 직접 열면 그 사이트의 글꼴로 보이며, 손글씨 글꼴에 한글이 없어 한글은 시스템 글꼴로 나옵니다.
 
 **영어 그림은 어떤 글꼴로 나오나요?**
 영어로만 된 그림은 PC의 영어 글꼴(Inter, Segoe UI, Helvetica Neue, Arial 순)을 씁니다. 파일 이름과 명령어는 고정폭 글꼴(SF Mono, Cascadia Code, Consolas, Menlo 순)로 씁니다. 웹 글꼴은 불러오지 않습니다.

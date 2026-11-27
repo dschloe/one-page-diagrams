@@ -193,7 +193,12 @@ def prepare(src, tmpdir, scale=2):
         return page, 2400, 2000, 25000, True
     if ext == ".excalidraw":
         scene = json.loads(text)
-        doc = (f'{head}#out svg{{display:block}}#out svg text{{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans CJK KR",sans-serif}}</style></head><body><div id="out"></div>'
+        # 스킬에 든 손글씨 글꼴(Gaegu, OFL). 파일이 없으면 시스템 글꼴로 넘어간다.
+        hand = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "fonts", "Gaegu-Regular.ttf")
+        face = ""
+        if os.path.exists(hand):
+            face = '@font-face{font-family:"OnePageHand";src:url("' + pathlib.Path(os.path.abspath(hand)).as_uri() + '") format("truetype")}'
+        doc = (f'{head}{face}#out svg{{display:block}}#out svg text{{font-family:"OnePageHand","Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans CJK KR",sans-serif}}</style></head><body><div id="out"></div>'
                f'<script type="module">import {{ exportToSvg }} from "{EXCALIDRAW_ESM}";\n'
                f'const scene = {json.dumps(scene, ensure_ascii=False)};\n'
                'const svg = await exportToSvg({ elements: scene.elements, files: scene.files || {}, '
